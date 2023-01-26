@@ -18,10 +18,19 @@ public class PageObj {
     @CacheLookup
     WebElement promoCode;
 
+    @FindBy(xpath = "//*[@id=\"content\"]/p[2]/a")
+    @CacheLookup
+    WebElement backButton;
 
-    public void enterPromoCode(String area) {
+
+    public void enterPromoCode(String code) {
         promoCode.clear();
-        promoCode.sendKeys(area);
+        promoCode.sendKeys(code);
     }
+
+    public void clickBackButton(){
+        backButton.click();
+    }
+
 
 }
