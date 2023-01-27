@@ -84,7 +84,6 @@ public class SearchSteps {
         Assert.assertEquals(actualValidationMSG, expectedMessage);
     }
 
-
     @And("Verify the validation2 {string}")
     public void validationMSG2(String expectedMessage) {
         String actualTitle = driver.getTitle();
@@ -134,7 +133,6 @@ public class SearchSteps {
         String actualMessage = driver.findElement(By.xpath(".//*[contains(text(),'Book a ticket to the red planet now!')]")).getText();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
-
 
     @After()
     public void close_Browser() {
